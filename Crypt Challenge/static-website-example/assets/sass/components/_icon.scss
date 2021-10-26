@@ -1,0 +1,223 @@
+///
+/// Dimension by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Icon */
+
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+$black: #000;
+$dark-grey: #343338;
+$red: #B52020;
+$blue: #2980B9;
+$green: #58A848;
+$dark-green: #326D26;
+$yellow: #F4D004;
+$skin: #F0B496;
+$white: #fff;
+
+$triangle: polygon(0 10%, 0 90%, 100% 53%);
+$trapezoid: polygon(0 0, 100% 29%, 100% 94%, 0 69%);
+$down-triangle: polygon(50% 64%, 0 0, 100% 0);
+$hulk: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 75% 100%, 25% 100%, 0 76%, 0% 20%);
+$hair-line: polygon(62% 0, 0 0, 11% 100%);
+$hair-end: polygon(52% 0, 100% 0, 100% 100%, 88% 100%);
+$eyebrow: polygon(0 62%, 100% 8%, 100% 69%, 0 89%);
+$teeth: polygon(15% 55%, 85% 55%, 100% 100%, 0 100%);
+$ironman: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 0);
+$mask: polygon(8% 0, 92% 0, 92% 46%, 75% 80%, 85% 100%, 15% 100%, 25% 80%, 8% 46%);
+$middle-mask: polygon(0 0, 100% 0, 81% 100%, 20% 100%);
+
+body {
+  background: $dark-grey;
+}
+
+.box {
+  position: relative;
+  width: 600px;
+  height: 420px;
+  margin: auto;
+  margin-top: 10%;
+  display: block;
+}
+
+span {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 100;
+  font-size: 10px;
+  color: $white;
+  top: 120%;
+  left: 5%;
+  text-align: center;
+  position: absolute;
+}
+
+.left{
+  left: 25%;
+}
+
+.one, .two, .three, .four {
+  position: absolute;
+  top: 20%;
+}
+
+.one {
+  left: 15%;
+}
+.two {
+  left: 35%;
+}
+.three {
+  left: 56%;
+}
+
+.four {
+  left: 75%;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+}
+
+
+.captain-america {
+  width: 63%;
+  height: 80%;
+  left: 17.5%;
+  position: absolute;
+  top: 15%;
+  border-radius: 20px;
+  background: $skin;
+  .hat {
+    position: absolute;
+    background: $blue;
+    height: 60%;
+    width: 105%;
+    border-radius: 50px 50px 0px 0px;
+    top: -5%;
+    left: -2%;
+    h1 {
+      font-family: sans-serif;
+      color: $white;
+      position: absolute;
+      margin-top: 0;
+      top: 10%;
+      left: 28%;
+      font-size: 1.7em;
+    }
+    .wings-left {
+      position: absolute;
+      background: $white;
+      height: 70%;
+      width: 20%;
+      left: -8%;
+      top: 20%;
+      clip-path: $trapezoid;
+      -webkit-clip-path: $trapezoid;
+      z-index: -1;
+    }
+    .wings-right {
+      position: absolute;
+      background: $white;
+      height: 70%;
+      width: 20%;
+      right: -8%;
+      top: 20%;
+      clip-path: $trapezoid;
+      -webkit-clip-path: $trapezoid;
+      z-index: -1;
+      transform: scaleX(-1);
+    }
+    .hat-left {
+      position: absolute;
+      background: $blue;
+      width: 50%;
+      height: 40%;
+      top: 99%;
+      clip-path: $down-triangle;
+      -webkit-clip-path: $down-triangle;
+    }
+    .hat-right {
+      position: absolute;
+      background: $blue;
+      width: 50%;
+      height: 40%;
+      left: 50%;
+      top: 99%;
+      clip-path: $down-triangle;
+      -webkit-clip-path: $down-triangle;
+    }
+    .eye {
+      position: absolute;
+      background: $skin;
+      width: 70%;
+      height: 70%;
+      left: 17.5%;
+      top: -8%;
+      clip-path: $down-triangle;
+      -webkit-clip-path: $down-triangle;
+      .ball {
+        position: absolute;
+        background: $black;
+        height: 6px;
+        width: 6px;
+        top: -2%;
+        border-radius: 50%;
+        left: 33%;
+      }
+    }
+  }
+  .mouth {
+    position: absolute;
+    background: $black;
+    width: 25%;
+    height: 3%;
+    top: 80%;
+    left: 37.5%;
+    z-index: 2;
+  }
+  .ears {
+    position: absolute;
+    background: $skin;
+    width: 25%;
+    height: 27%;
+    top: 44%;
+    left: -10%;
+    border-radius: 30px;
+    z-index: -1;
+    &:after {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      margin-left: 42px;
+      border-radius: 30px;
+      background: $skin;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8px;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #EA7996;
+  letter-spacing: 3px;
+  font-family: 'Open Sans', sans-serif;
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
